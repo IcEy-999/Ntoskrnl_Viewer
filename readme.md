@@ -42,10 +42,10 @@ It only supports x64 system, and theoretically supports any version (as long as 
 
 ![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/d_test.png)
 
-### ”d“也可以通过地址读取内存：（读取非法地址时会报错）
+### “d”也可以通过地址读取内存：（读取非法地址时会报错）
 
 
-### (”D "you can also read the memory through the address: (an error will be reported when reading the illegal address))
+### (“D ”you can also read the memory through the address: (an error will be reported when reading the illegal address)
 
 
 

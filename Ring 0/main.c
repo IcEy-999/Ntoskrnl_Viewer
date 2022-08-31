@@ -58,9 +58,15 @@ NTSTATUS myfun(PDEVICE_OBJECT mydevice, PIRP irp)
 		memcpy(&add, buffer3, sizeof(DWORD64));
 		ULONG il = stack->Parameters.DeviceIoControl.InputBufferLength;
 		//ULONG ol = stack->Parameters.DeviceIoControl.OutputBufferLength;
-
-		memcpy(buffer2, add, il);
+		_try{
+		memcpy(buffer2, add, il); 
 		irp->IoStatus.Information = il;
+		}
+		_except(1) {
+			//memset(buffer2, 0, il);
+			irp->IoStatus.Information = 0;
+		}
+		
 		break;
 	}
 	default:

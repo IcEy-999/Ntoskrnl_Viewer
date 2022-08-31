@@ -42,13 +42,6 @@ It only supports x64 system, and theoretically supports any version (as long as 
 
 ![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/d_test.png)
 
-### “x” 同WinDbg Same as WinDbg：
-
-![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/x_test.png)
-
-
-
-
 ### ”d“也可以通过地址读取内存：（读取非法地址时会报错）
 
 
@@ -57,6 +50,15 @@ It only supports x64 system, and theoretically supports any version (as long as 
 
 
 ![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/d_test2.png)
+
+
+
+
+
+### “x” 同WinDbg Same as WinDbg：
+
+![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/x_test.png)
+
 
 
 

@@ -48,19 +48,16 @@ It only supports x64 system, and theoretically supports any version (as long as 
 
 
 
-## 注意：
 
-### ”d“默认只能通过符号读取内存，通过地址读取内存需要开启”ROOT“权限：
+### ”d“也可以通过地址读取内存：（读取非法地址时会报错）
 
-### ("d" by default, the memory can only be read through symbols, and the "root" permission needs to be enabled to read the memory through addresses: for example:)
+
+### (”D "you can also read the memory through the address: (an error will be reported when reading the illegal address))
 
 
 
 ![image](https://github.com/IcEy-999/IC_Ntoskrnl_Viewer/blob/main/Release/d_test2.png)
 
-原因：可能会读写权限不足，发生蓝屏。
-
-Cause: the blue screen may occur due to insufficient read and write permissions.
 
 
 
@@ -94,9 +91,6 @@ Otherwise, the driver cannot be uninstalled normally!
 
 The commands "EB, EW, ED, EQ" may be updated later.
 
-和”a“命令
-
-And "a" command
 
 会逐渐向 windbg本地调试可实现的功能靠近！
 

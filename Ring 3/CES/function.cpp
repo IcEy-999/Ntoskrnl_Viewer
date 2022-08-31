@@ -73,7 +73,11 @@ int Complete_Command(PPdb_Task Pdbfile,PCommand Task) {
 	DWORD lent = 0;
 	if (!DeviceIoControl(Pdbfile->My_Drive, GET_VALUE, buffer, Default_Len, &(Task->Address), 16, &lent, NULL))
 		return 0;
-
+	if (lent == 0)
+	{
+		printf(" Cannot read!\n");
+		return 1;
+	}
 	
 	switch (Task->width) {//宽度输出
 	case 1: {
@@ -192,8 +196,8 @@ int Read_Memory(PPdb_Task Pdbfile, PCommand Task, int width) {
 	else
 	{
 
-		if (Root == 0)//通过地址都内存需要root！！
-			return 0;
+		//if (Root == 0)//通过地址都内存需要root！！
+		//	return 0;
 		//输入的是地址
 		DWORD64 add = 0;
 

@@ -73,12 +73,12 @@ int Process_Command(PUCHAR C) {
 		return -1;
 	}
 
-	if (strcmp((char*)&(Task.Parameter[0]), "root") == 0)
-	{
-		Root = 1;
-		printf("\nWarning : ROOT\n");
-		return 1;
-	}
+	//if (strcmp((char*)&(Task.Parameter[0]), "root") == 0)
+	//{
+	//	Root = 1;
+	//	printf("\n Warning : ROOT\n");
+	//	return 1;
+	//}
 
 	return state;
 }
@@ -123,7 +123,7 @@ int main() {
 
 		State = Process_Command(Cin_Command);
 		if (State == 0)
-			printf("Command Error!\n");
+			printf(" Command Error!\n");
 		if (State == -1)
 			return 0;
 	}
